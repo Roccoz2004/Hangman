@@ -1,4 +1,4 @@
-package dev.roccoz.pack;
+package dev.roccoz2004.pack;
 import java.util.Scanner;
 
 public class Game {
