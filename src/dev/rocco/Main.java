@@ -1,4 +1,4 @@
-// Hangman game
+package dev.rocco;// Hangman game
 
 import java.util.Scanner;
 
@@ -147,10 +147,10 @@ class Main {
                     if (word.charAt(position) == letter
                             && hiddenWord.charAt(position) != letter) {
 
-                        hiddenWord = hiddenWord.replaceAll("_ ", "_");
+                        hiddenWord = hiddenWord.replaceAll("_ ", "_ ");
                         String word2;
                         word2 = hiddenWord.substring(0, position) + letter + hiddenWord.substring(position + 1);
-                        word2 = word2.replaceAll("_", "_ ");
+                        word2 = word2.replaceAll("_ ", "_ ");
                         hiddenWord = word2;
                     }
                 }
