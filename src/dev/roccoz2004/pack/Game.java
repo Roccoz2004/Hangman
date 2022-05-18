@@ -6,7 +6,7 @@ public class Game {
     int random = (int) (Math.random() * list.length);
     String word = list[random];
     int wordLength = word.length() + 1;
-    int tries = 10;
+    int tries = 1;
     String answer;
 
     public static void ask() {
@@ -19,9 +19,10 @@ public class Game {
         } else if (!access.word.contains(access.answer)) {
             System.out.println("There is no " + access.answer + " in the word");
             access.tries--;
-            System.out.println("You have " + access.tries + " tries");
+            System.out.println("You have " + access.tries + " tries\n");
             if (access.tries == 0) {
                 System.out.println("YOU LOSE");
+                System.exit(0);
             }
         } else {
             String[] wordSplit = access.word.split("");
@@ -33,12 +34,16 @@ public class Game {
         }
     }
 
+    public static void printWord() {
+
+    }
+
     public static void main(String[] args) {
         Game access = new Game();
         System.out.println("Lets play Hangman! \nPlease enter only 1 letter.\n");
         int i = 0;
         while (i < access.wordLength) {
-            System.out.print("_");
+            System.out.print("_ ");
             i++;
         }
         System.out.println("\n");
