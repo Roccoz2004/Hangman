@@ -1,4 +1,4 @@
-// Hangman game
+package dev.rocco;// Hangman game
 
 import java.util.Scanner;
 
